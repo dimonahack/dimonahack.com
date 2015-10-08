@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - DimonaHack</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="">
+    <meta name="author" content="Websiter.co.il - Nir Gofman">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/countdown.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <div class="topSection">
+        <div class="logoArea">
+            <h1><a href="/">DIMON@HACK</a></h1>
+        </div>
+        <a class="eventDetailsLink" href="details">פרטי האירוע</a>
+        <a class="registerLink" href="details">הרשמה</a>
+    </div>
+    <div class="topSection">
+        <div class="logoArea">
+            <table class="timeTable">
+                <tr class="topTr">
+                    <td>ימים</td>
+                    <td>שעות</td>
+                    <td>דקות</td>
+                    <td>שניות</td>
+                </tr>
+                <tr class="timeTr">
+                    <td class="days" style="border-left: 1px solid #CC3E00;"><i class="fa fa-spinner fa-spin"></i></td>
+                    <td class="hours" style="border-left: 1px solid #CC3E00;"><i class="fa fa-spinner fa-spin"></i></td>
+                    <td class="minutes" style="border-left: 1px solid #CC3E00;"><i class="fa fa-spinner fa-spin"></i></td>
+                    <td class="seconds"><i class="fa fa-spinner fa-spin"></i></td>
+                </tr>
+            </table>
+        </div>
+        <div class="freeSpace">
+            <h2>#האקתוןדימונההראשון</h2>
+            <span>בואו תעשו הסטוריה והצטרפו להאקתון הראשון בדימונה! 19-20 בנובמבר.</span>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>
