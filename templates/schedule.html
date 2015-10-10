@@ -1,0 +1,63 @@
+{% macro left(title, time, end=False) -%}
+    <div class="timeDiv">
+        <div class="leftTimelineDiv">
+            <h3 class="timeDetailsTitle leftTitle">{{ title }}</h3>
+            <span class="byLabel leftTime">{{ time }}</span>
+        </div>
+        <div class="timeLineDiv">
+            <div class="circleTimeLineDiv"></div>
+            {% if not end %}
+                <div class="lineTimeLine"></div>
+            {% endif %}
+        </div>
+    </div>
+{%- endmacro %}
+
+{% macro right(title, time, end=False) -%}
+    <div class="timeDiv">
+        <div class="leftTimelineDiv">
+            <span class="timeSpan leftTime"></span>
+        </div>
+        <div class="timeLineDiv">
+            <div class="circleTimeLineDiv"></div>
+            {% if not end %}
+                <div class="lineTimeLine"></div>
+            {% endif %}
+        </div>
+        <div class="rightTimeLineDiv">
+            <h3 class="timeDetailsTitle rightTitle">{{ title }}</h3>
+            <span class="byLabel rightTime">{{ time }}</span>
+        </div>
+    </div>
+{%- endmacro %}
+
+<div class="schedule1Div">
+    <h2 class="scheduleTitle">לוח זמנים - 12-13.11.2015<Br><span class="lineTitleSpan"></span></h2>
+
+    {{ right("התכנסות", "09:00") }}
+    {{ left("ברוכים הבאים ומידע על היום","09:45 - 10:15") }}
+    {{ right("ההאקתון מתחיל","10:15-13:30") }}
+    {{ left("ארוחת צהריים","13:30-14:30") }}
+    {{ right("מיני הרצאה","14:30-15:15") }}
+    {{ left("ההאקתון ממשיך","15:15-18:30") }}
+    {{ right("ארוחה ומשקאות","18:30-19:15") }}
+    {{ left("מיני הרצאה","19:15-19:45") }}
+    {{ right("ממשיכים לעבוד","19:45-21:00") }}
+    {{ left("ארוחת לילה","1:00-01:45") }}
+    {{ right("עובדים/מתאפצים","01:45-09:45") }}
+    {{ left("ארוחת בוקר","09:00-09:45") }}
+    {{ right("ספרינט אחרון - הקוד ממשיך","09:45-12:00") }}
+    {{ left("מצגות והכרזת הזוכים","12:00-13:45") }}
+
+    <div class="timeDiv">
+        <div class="leftTimelineDiv">
+            <span class="timeSpan leftTime">13:45 - 14:00</span>
+        </div>
+        <div class="timeLineDiv">
+            <div class="circleTimeLineDiv"></div>
+        </div>
+        <div class="rightTimeLineDiv">
+            <h3 class="timeDetailsTitle rightTitle">דברי סיום</h3>
+        </div>
+    </div>
+</div>
