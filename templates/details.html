@@ -1,81 +1,31 @@
 {% extends "_layout.html" %}
+
 {% block title %}פרטי האירוע{% endblock %}
 
 {% block head %}
     {{ super() }}
-    <style>
-        body {
-            background: #f9f9f9 !important;
-        }
-    </style>
-    <script>
-        $(document).ready(function () {
-            $(".tab1").click(function () {
-                $(".tab1Div").css("display", "block");
-                $(".tab2Div").css("display", "none");
-                $(".tab3Div").css("display", "none");
-                $(".tab1").addClass("activeTab");
-                $(".tab2").removeClass("activeTab");
-                $(".tab3").removeClass("activeTab");
-            });
-            $(".tab2").click(function () {
-                $(".tab2Div").css("display", "block");
-                $(".tab1Div").css("display", "none");
-                $(".tab3Div").css("display", "none");
-                $(".tab2").addClass("activeTab");
-                $(".tab1").removeClass("activeTab");
-                $(".tab3").removeClass("activeTab");
-            });
-            $(".tab3").click(function () {
-                $(".tab3Div").css("display", "block");
-                $(".tab2Div").css("display", "none");
-                $(".tab1Div").css("display", "none");
-                $(".tab3").addClass("activeTab");
-                $(".tab2").removeClass("activeTab");
-                $(".tab1").removeClass("activeTab");
-            });
-        });
-    </script>
+    <link rel="stylesheet" type="text/css" href="/static/css/details.min.css"/>
+    <script src="static/js/details.js"></script>
 {% endblock %}
 
 {% block content %}
     <div class="grid">
         <div class="tabs">
             <div class="tabSpace"></div>
-            <div class="tab tab1 activeTab">
-                <span class="tabIcon icon1"><Br></span>
-            </div>
-            <div class="tab tab2">
-                <span class="tabIcon icon2"><Br></span>
-            </div>
-            <div class="tab tab3" style="border-left: 1px solid #aaa;">
-                <span class="tabIcon icon3"><Br></span>
-            </div>
+            <div class="tab tab1 activeTab" data-tab="tab1Div"><span class="tabIcon icon1"><br/></span></div>
+            <div class="tab tab2" data-tab="tab2Div"><span class="tabIcon icon2"><br/></span></div>
+            <div class="tab tab3" data-tab="tab3Div"><span class="tabIcon icon3"><br/></span></div>
+            <div class="tab tab4" data-tab="tab4Div"><span class="tabIcon icon4"><br/></span></div>
+            <div class="tab tab5" data-tab="tab5Div"><span class="tabIcon icon5"><br/></span></div>
         </div>
         <div class="allTabsDivs">
-            <div class="tab1Div">
-                <h2 class="tabTitle">מה זה האירוע הזה?</h2>
-
-                <h3 class="tabSubTitle">דע יותר על האירוע</h3>
-
-                <div class="liner"><span></span></div>
-                <p class="tabParagraph">
-האקתון דימונה הראשון!
-התחרות תתקיים בתאריכים 12-13/11/15 כחלק משבוע היזמות העולמי
+            <div class="tabDiv tab1Div">
+                {% include 'about.html' %}
             </div>
-            <div class="tab2Div">
-                <h2 class="tabTitle">מתי קורה מה?</h2>
-
-                <h3 class="tabSubTitle">מתי האירוע, ארוחות, הרצאות והפתעות נוספות?</h3>
-
-                <div class="liner"><span></span></div>
-                <p class="tabParagraph">
-                    לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי
-                    במר מודוף. אודיפו בלאסטיק
-                </p>
+            <div class="tabDiv tab2Div">
                 {% include 'schedule.html' %}
             </div>
-            <div class="tab3Div">
+            <div class="tabDiv tab3Div">
                 <h2 class="tabTitle">מי הולך לדבר ולהרצות?</h2>
 
                 <h3 class="tabSubTitle">דולור סיט אמט, קונסקטורר אדיפיסינג אלית נו</h3>
@@ -85,6 +35,12 @@
                     לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי
                     במר מודוף. אודיפו בלאסטיק
                 </p>
+            </div>
+            <div class="tabDiv tab4Div">
+                {% include 'schedule.html' %}
+            </div>
+            <div class="tabDiv tab5Div">
+                {% include 'rules.html' %}
             </div>
         </div>
         <div style="margin:0 auto; text-align: center;">
