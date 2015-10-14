@@ -1,0 +1,27 @@
+body {
+  background: url('../images/hack.jpg') no-repeat;
+  background-size: cover;
+}
+.centerLogo {
+  font-style: italic;
+  font-weight: normal;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  opacity: 0.6;
+  text-shadow: 0 0 10px #000;
+  font-family: "Audiowide";
+  font-size: 70px;
+}
+.centerLogo span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
