@@ -1,0 +1,25 @@
+.timeTable {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.timeTable tr.topTr {
+  height: 30px;
+  background: #000;
+}
+.timeTable tr.topTr td {
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.timeTable tr.timeTr {
+  background: #FF4E00;
+}
+.timeTable tr.timeTr td {
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+  width: 13%;
+  font-weight: bold;
+}
