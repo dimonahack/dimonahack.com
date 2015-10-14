@@ -69,7 +69,7 @@ body {
   content: "\f234";
 }
 .grid .tabs .tab .tabIcon.icon3::after {
-  content: "הרצאות";
+  content: "מנטורים / שופטים וספונסרים";
 }
 .grid .tabs .tab .tabIcon.icon4::before {
   content: "\f06b";
