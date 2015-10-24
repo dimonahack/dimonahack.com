@@ -12,13 +12,16 @@ def hello():
     return render_template('index.html')
 
 
-@app.route("/details")
-def details():
-
-    fn = os.path.join(md_dir, 'rules.md')
+def md(f):
+    fn = os.path.join(md_dir, f + '.md')
     with codecs.open (fn, "r", encoding='UTF-8') as myfile:
         data=myfile.read().replace('\n', '')
-    rules = Markup(markdown.markdown(data))
+    return Markup(markdown.markdown(data))
+
+@app.route("/details")
+def details():
+    rules = md('rules')
+    staff = md('staff')
     return render_template('details.html', **locals())
 
 
