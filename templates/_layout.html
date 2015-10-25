@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% include 'ga.html' %}
     {% block head %}
     <title>{% block title %}{% endblock %} - DimonaHack</title>
     <meta charset="UTF-8"/>
@@ -14,6 +15,7 @@
     {% endblock %}
 </head>
 <body>
+    {% include 'gtm.html' %}
     {% include 'fb_sdk.html' %}
     <div class="topSection">
         <div class="logoArea">
