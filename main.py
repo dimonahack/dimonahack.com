@@ -7,6 +7,7 @@ import os
 current_dir = os.path.dirname(__file__)
 md_dir = os.path.join(current_dir, 'markdown')
 
+
 @app.route("/")
 def hello():
     return render_template('index.html')
@@ -18,10 +19,13 @@ def md(f):
         data=myfile.read().replace('\n', '')
     return Markup(markdown.markdown(data))
 
+
 @app.route("/details")
 def details():
     rules = md('rules')
     staff = md('staff')
+    prices = md('prices')
+    sponsers = md('sponsers')
     return render_template('details.html', **locals())
 
 
