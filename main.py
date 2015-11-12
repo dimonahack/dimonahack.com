@@ -33,6 +33,10 @@ def details():
 def signup():
     return render_template('signup.html')
 
+@app.route("/gallery")
+def gallery():
+    return render_template('gallery.html')
+
 if __name__ == "__main__":
     print "Starting dimonahack.com..."
     app.run(port=8576)

@@ -1,0 +1,21 @@
+{% extends "_layout.html" %}
+
+{% block title %}גלריה{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="/static/vendor/Facebook-Album-Browser/src/jquery.fb.albumbrowser.css" />
+    <script type="text/javascript" src="/static/vendor/Facebook-Album-Browser/src/jquery.fb.albumbrowser.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="fb-album-container"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".fb-album-container").FacebookAlbumBrowser({
+            account: "DimonaHack"
+        });
+    });
+</script>
+{% endblock %}
