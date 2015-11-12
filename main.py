@@ -34,4 +34,5 @@ def signup():
     return render_template('signup.html')
 
 if __name__ == "__main__":
-    app.run(port=8576, debug=True)
+    print "Starting dimonahack.com..."
+    app.run(port=8576)

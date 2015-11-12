@@ -11,7 +11,7 @@ body {
   left: 0;
   text-align: center;
 }
-.centerLogo a {
+.centerLogo p {
   background: #313131;
   border: 1px solid #FF4E00;
   padding: 25px 55px;
@@ -22,10 +22,10 @@ body {
   font-family: "Audiowide";
   font-size: 50px;
 }
-.centerLogo a:visited {
+.centerLogo p:visited {
   color: #FF4E00;
 }
-.centerLogo a:hover {
+.centerLogo p:hover {
   color: white;
   background: gray;
 }
